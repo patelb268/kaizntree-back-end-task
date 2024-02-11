@@ -20,3 +20,36 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+# Virtual environment
+/venv/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database
+*.sqlite3
+db.sqlite3
+
+# Log files
+*.log
+
+# Temporary files
+*.swp
+*~
+*.~
+*.bak
+*.pyc
+*.pyo
+*.pyd
+
+# Static files
+/static/
+
+# Media files
+/media/
+
+# Secret key file
+*.secret_key
