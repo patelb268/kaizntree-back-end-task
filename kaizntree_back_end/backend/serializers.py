@@ -1,10 +1,20 @@
-# backend/serializers.py
 from rest_framework import serializers
-from .models import Item
+from backend.models import Item, Tag, Category
+
 
 class ItemSerializer(serializers.ModelSerializer):
-    category = serializers.StringRelatedField()
-    tags = serializers.StringRelatedField(many=True)
     class Meta:
         model = Item
-        fields = ['user','sku', 'name', 'stock_status', 'available_stock', 'category', 'tags']
+        fields = ['sku', 'name', 'category', 'in_stock', 'available_stock', 'created_at', 'updated_at']
+
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = ['id', 'name', 'icon', 'created_at', 'updated_at']
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id', 'name', 'created_at', 'updated_at']
