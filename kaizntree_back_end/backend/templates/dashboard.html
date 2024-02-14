@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form class="form-container" method="post" action="category/create">
+	{% csrf_token %}
+	<button type="submit">Create Category</button>
+</form>
+
+<form class="form-container" method="post" action="item/create">
+	{% csrf_token %}
+	<button type="submit">Create Item</button>
+</form>
+
+<h2>Items List</h2>
+<form class="form-container" method="post" action="dashboard">
+	{% csrf_token %}
+	<input type="text" name="search" placeholder="Search">
+	<input type="number" name="in_stock_min" placeholder="In stock min">
+	<input type="number" name="in_stock_max" placeholder="In stock max">
+	<input type="number" name="available_stock_min" placeholder="Available stock min">
+	<input type="number" name="available_stock_max" placeholder="Available stock max">
+	<button type="submit">Search</button>
+</form>
+<div class="table-container">
+	<table>
+		<tr>
+			<th>SKU</th>
+			<th>Item Name</th>
+			<th>Tags</th>
+			<th>Category</th>
+			<th>In Stock</th>
+			<th>Available Stock</th>
+		</tr>
+		{% for item in items %}
+		<tr>
+			<td>{{ item.sku }}</td>
+			<td>{{ item.name }}</td>
+			<td>
+				{% for tag in item.tags %}
+				{{ tag }}
+				{% endfor %}
+			</td>
+			<td>{{ item.category }}</td>
+			<td>{{ item.in_stock }}</td>
+			<td>{{ item.available_stock }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+
+{% endblock %}
