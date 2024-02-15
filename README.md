@@ -25,6 +25,8 @@ optional but recommended to set up a [Virtual enviroment]( https://docs.djangopr
 
         python manage.py runserver
 
+The server will run at `http://127.0.0.1:8000/`
+
 ## Feature List
 - User Authentication
 - User Specific Items Dashboard
