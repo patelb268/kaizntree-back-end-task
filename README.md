@@ -141,7 +141,8 @@ Catagories Collection:
             }
 
 ### API Refrence And Testing
-API Documentatuion can be found in  
+API Documentatuion can be found in [here](https://github.com/patelb268/kaizntree-back-end-task/blob/main/Kaizntree.postman_collection.json)
+Export these file in your Postman and open it as a Postman Document
 
 You can test API for creating items catagory and filtering the items by running `test.py` at following path
 
