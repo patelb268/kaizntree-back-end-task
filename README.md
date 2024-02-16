@@ -2,7 +2,7 @@
 
 # Video Submission
 
-https://drive.google.com/drive/folders/1VlHlchWNeRKAGGHwQZ8r9dv2Lby1Mxy8
+https://drive.google.com/file/d/1sbQQdu3Q1vj-4gaS75IhCTrB-zUYsuAC/view?usp=drive_link
 
 
 ### Clone The Repository
